@@ -1,0 +1,13 @@
+.MenuInicial {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+
+    position: absolute;
+    width: 269.47px;
+    height: 186.81px;
+    left: calc(50% - 269.47px/2 - 0.27px);
+    top: calc(50% - 186.81px/2 + 0.41px);
+    
+}

@@ -1,0 +1,6 @@
+.Background {
+    position: relative;
+    width: 1280px;
+    height: 720px;
+    background: linear-gradient(90deg, #43E97B 0%, #38F9D7 100%);
+}

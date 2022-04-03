@@ -1,9 +1,10 @@
-import React from 'react';
+import Background from './components/Background';
 
 function App() {
   return (
     <div className="App">
-      teste
+      <Background>
+      </Background>
     </div>
   );
 }

@@ -1,0 +1,25 @@
+.Button {
+    height: 56px;
+    width: 124px;
+    left: 0px;
+    top: 0px;
+    border-radius: 42px;
+
+
+    /* Danger / 500 - Default */
+
+    background: #FF3D71;
+    
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 24px;
+    /* identical to box height, or 133% */
+
+    text-align: center;
+
+    /* Basic / 100 */
+
+    color: #FFFFFF;
+}
