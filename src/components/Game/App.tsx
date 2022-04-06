@@ -1,10 +1,11 @@
-import Background from './components/Background';
+import Board from '../Board';
 
 function App() {
   return (
     <div className="App">
-      <Background>
-      </Background>
+      <header>
+        <Board />
+      </header> 
     </div>
   );
 }
