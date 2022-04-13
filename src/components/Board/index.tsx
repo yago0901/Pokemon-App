@@ -1,12 +1,12 @@
 import React from 'react';
-import { GAME_SIZE_HEIGHT, GAME_SIZE_WIDTH } from '../../settings/constants';
 import Ash from '../Ash';
+import './index.css';
 
 const Board = () => {
     return(
-        <div>
+        <div className='Container'>
             <Ash />
-            <img src="./assets/Background.png" alt="background" width={GAME_SIZE_WIDTH} height={GAME_SIZE_HEIGHT} />
+            <img src="./assets/Background.png" alt="background" />
         </div>
     );
 }

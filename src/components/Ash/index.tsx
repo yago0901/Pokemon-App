@@ -12,8 +12,8 @@ const Ash = () => {
             backgroundRepeat: 'no-repeat',
             animation: 'ash-andando 1s steps(4) infinite',
             position: 'absolute' ,
-            bottom: 65 * 5,
-            left: 65 * 12,
+            bottom: 64 * 0,
+            left: 64 * 0,
         }}
         />
     );
