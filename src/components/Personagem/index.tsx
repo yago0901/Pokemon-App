@@ -1,9 +1,20 @@
 import * as C from './styles';
 
-const Personagem = () => {
+type Props = {
+  x: number;
+  y:number;
+}
+
+const Personagem = ({x, y} : Props) => {
+  const size = 50;
+
     return(
-      <C.Container>
-          ...
+      <C.Container
+        size={size}
+        left={x * size}
+        top={y * size}
+      >
+          
       </C.Container>  
     );
 }
