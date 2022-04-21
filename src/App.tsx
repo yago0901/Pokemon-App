@@ -1,8 +1,8 @@
 import { useEffect } from 'react';
 import * as C from './App.styles';
-import Ash from '../src/components/Ash';
 import Personagem from './components/Personagem';
 import { usePersonagem } from './hooks/usePersonagem';
+import Pokemon from './components/Pokemon';
 
 const App = () => {
   //Adiciona as propriedades de Personagem ao char
@@ -42,7 +42,7 @@ const App = () => {
     <C.Container>
       <C.Map>
         <Personagem x={char.x} y={char.y} side={char.side} />
-        <Ash/>
+        <Pokemon x={0} y={0}/>
       </C.Map>
     </C.Container>
   );
