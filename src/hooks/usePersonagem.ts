@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { PersonagemSides } from '../types/PersonagemSides';
 import { mapSpots } from '../data/mapSpots';
-import { NumericLiteral } from 'typescript';
 
 export const usePersonagem = () => {
     const [pos, setPos] = useState({ x:9, y:6});

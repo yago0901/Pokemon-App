@@ -1,8 +1,8 @@
 import { useEffect } from 'react';
 import * as C from './App.styles';
 import Personagem from './components/Personagem';
+import MenuLateral from './components/MenuLateral';
 import { usePersonagem } from './hooks/usePersonagem';
-import Pokemon from './components/Pokemon';
 
 const App = () => {
   //Adiciona as propriedades de Personagem ao char
@@ -41,8 +41,8 @@ const App = () => {
   return (
     <C.Container>
       <C.Map>
+        <MenuLateral/>
         <Personagem x={char.x} y={char.y} side={char.side} />
-        <Pokemon x={0} y={0}/>
       </C.Map>
     </C.Container>
   );
