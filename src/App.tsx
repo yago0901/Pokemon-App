@@ -3,6 +3,7 @@ import * as C from './App.styles';
 import Personagem from './components/Personagem';
 import MenuLateral from './components/MenuLateral';
 import { usePersonagem } from './hooks/usePersonagem';
+import { Balloon } from './components/Balloon';
 
 const App = () => {
   //Adiciona as propriedades de Personagem ao char
@@ -11,8 +12,10 @@ const App = () => {
   //Evento de leitor de keydown=aperto de tecla para ser acessada pela função handleKeyDown
   useEffect(() => {
     window.addEventListener('keydown', handleKeyDown);
+
   }, []);
 
+  
   /*Constante que recebe a tecla do comando EventListener 
   e trata de acordo com teclas necessárias */
   const handleKeyDown = (e: KeyboardEvent) => {
@@ -42,6 +45,7 @@ const App = () => {
     <C.Container>
       <C.Map>
         <MenuLateral/>
+        <Balloon x={char.x} y={char.y -1}/>
         <Personagem x={char.x} y={char.y} side={char.side} />
       </C.Map>
     </C.Container>

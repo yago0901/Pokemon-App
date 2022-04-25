@@ -24,16 +24,10 @@ export const Button = styled.button`
     border-radius: 50px;
 
     position: absolute;
-    left: 0%;
-    right: 0%;
-    top: 0%;
-    bottom: 0%;
-
     background: #00D68F;
 
     border: 4px solid #004A45;
     box-sizing: border-box;
-
 `;
 
 export const Button2 = styled.button`
@@ -158,3 +152,18 @@ export const Button7 = styled.button`
 
 `;
 
+export const Title1 = styled.h2`
+    font-size: 30px;
+    color: #004a45;
+    font-family: 'Open Sans', sans-serif;
+    align-items: center;
+    justify-content: center;
+`;
+
+export const Title2 = styled.h2`
+    font-size: 30px;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    align-items: center;
+    justify-content: center;
+`;
