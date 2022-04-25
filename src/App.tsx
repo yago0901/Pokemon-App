@@ -1,11 +1,15 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import * as C from './App.styles';
 import Personagem from './components/Personagem';
 import MenuLateral from './components/MenuLateral';
 import { usePersonagem } from './hooks/usePersonagem';
 import { Balloon } from './components/Balloon';
+import Modal from './components/Modal';
 
 const App = () => {
+
+  const [isModalVisible, setIsModalVisible] = useState(false);
+
   //Adiciona as propriedades de Personagem ao char
   const char = usePersonagem();
 
@@ -14,7 +18,6 @@ const App = () => {
     window.addEventListener('keydown', handleKeyDown);
 
   }, []);
-
   
   /*Constante que recebe a tecla do comando EventListener 
   e trata de acordo com teclas necessárias */
@@ -44,9 +47,14 @@ const App = () => {
   return (
     <C.Container>
       <C.Map>
-        <MenuLateral/>
-        <Balloon x={char.x} y={char.y -1}/>
         <Personagem x={char.x} y={char.y} side={char.side} />
+        <Balloon x={char.x} y={char.y -1}/>
+        <MenuLateral/>
+        <button onClick= {() =>setIsModalVisible (true)}>Open</button>
+        {isModalVisible ? (
+        <Modal/>
+         ) : null}
+
       </C.Map>
     </C.Container>
   );

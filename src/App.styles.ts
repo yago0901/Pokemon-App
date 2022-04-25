@@ -12,4 +12,6 @@ export const Map = styled.div`
     background-position: left top;
     background-size: 100%;
     background-repeat: no-repeat;
+
+    
 `;
