@@ -1,24 +1,37 @@
 import * as C from './styles';
 import Pokemon from '../Pokemon';
-import { Title, PropsPok, Hp, Altura, Peso } from './styles';
+import { ValorPok } from './styles';
+import Pokebola from '../Pokebola';
 
 type Props = {
-  onClose: any;
+  closeModal: Function;
 };
 
-const Modal = ({ onClose = () => {} }) => {
+const Modal = ({ closeModal }: Props) => {
   return(
       <C.Container>
         <C.BackgroundModal>
-          <button onClick={() => onClose()}>X</button>
+          <button onClick={() => closeModal(false)}>X</button>
         </C.BackgroundModal>
         <C.DescriptionModal>
           <C.Title>Bulbasaur</C.Title>
+          
+        <Pokebola/>
           <C.PropsPok>
-            <C.Hp>...</C.Hp>
-            <C.Altura>...</C.Altura>
-            <C.Peso>...</C.Peso>
+            <C.Hp>HP
+              <ValorPok>45/45</ValorPok>
+            </C.Hp>
+            <C.Altura>ALTURA
+              <ValorPok>0.7 m</ValorPok>
+            </C.Altura>
+            <C.Peso>PESO
+              <C.ValorPok>6.9KG</C.ValorPok>
+            </C.Peso>
           </C.PropsPok>
+          <C.FooterPok>
+            <C.StylePok>Planta</C.StylePok>
+            <C.AtribPok>Veneno</C.AtribPok>
+          </C.FooterPok>
         </C.DescriptionModal>
         <Pokemon/>
       </C.Container>  

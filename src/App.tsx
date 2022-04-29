@@ -48,11 +48,10 @@ const App = () => {
     <C.Container>
       <C.Map>
         <Personagem x={char.x} y={char.y} side={char.side} />
-        <Balloon x={char.x} y={char.y -1}/>
+        <Balloon x={char.x} y={char.y -1} openModal={setIsModalVisible}/>
         <MenuLateral/>
-        <button onClick= {() =>setIsModalVisible (true)}>Open</button>
         {isModalVisible ? (
-        <Modal/>
+        <Modal closeModal={setIsModalVisible}/>
          ) : null}
 
       </C.Map>
