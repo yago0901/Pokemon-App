@@ -4,13 +4,12 @@ import { useLayoutEffect } from 'react';
 type Props={
     x:number;
     y: number;
-    openModal: Function;
+    openBallon: Function;
 }
 
-export const Balloon = ({x, y, openModal}: Props) => {
+export const Balloon2 = ({x, y, openBallon}: Props) => {
     const size = 50;
     const sizeT = 47;
-    
 
     useLayoutEffect(() => {
             
@@ -19,15 +18,13 @@ export const Balloon = ({x, y, openModal}: Props) => {
             ballon.addEventListener( "click", (e)=>
             {
             e.preventDefault()   
-            openModal(true)
+            openBallon(true)
 
             } , false);
         };
        
-        
-        
-        
     }, []);
+    
 
     return(
         <C.Container id="ballon"

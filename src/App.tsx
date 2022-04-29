@@ -4,12 +4,16 @@ import Personagem from './components/Personagem';
 import MenuLateral from './components/MenuLateral';
 import { usePersonagem } from './hooks/usePersonagem';
 import { Balloon } from './components/Balloon';
+import { Balloon2 } from './components/Balloon2';
 import Modal from './components/Modal';
 
 const App = () => {
 
   const [isModalVisible, setIsModalVisible] = useState(false);
-
+  
+  // Lógica para setar Ballon=(searching) para visivel quando true
+  const [isBallon1Visible, setisBallon1Visible] = useState(false);
+ 
   //Adiciona as propriedades de Personagem ao char
   const char = usePersonagem();
 
@@ -48,7 +52,10 @@ const App = () => {
     <C.Container>
       <C.Map>
         <Personagem x={char.x} y={char.y} side={char.side} />
+        
+        {isBallon1Visible ? (
         <Balloon x={char.x} y={char.y -1} openModal={setIsModalVisible}/>
+         ) : <Balloon2 x={char.x} y={char.y -1} openBallon={setisBallon1Visible} />  }
         <MenuLateral/>
         {isModalVisible ? (
         <Modal closeModal={setIsModalVisible}/>

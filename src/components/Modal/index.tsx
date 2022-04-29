@@ -15,8 +15,7 @@ const Modal = ({ closeModal }: Props) => {
         </C.BackgroundModal>
         <C.DescriptionModal>
           <C.Title>Bulbasaur</C.Title>
-          
-        <Pokebola/>
+            <Pokebola/>
           <C.PropsPok>
             <C.Hp>HP
               <ValorPok>45/45</ValorPok>

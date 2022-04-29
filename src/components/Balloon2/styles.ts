@@ -6,6 +6,6 @@ export const Container = styled.div<{left: number, top: number, size: number, si
     position: absolute;
     left: ${props => props.left}px;
     top: ${props => props.top}px;
-    background-image: url('/assets/Searching.png');
+    background-image: url('/assets/Search.png');
 
 `;
